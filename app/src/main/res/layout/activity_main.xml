@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#edf2ef"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="80dp"
+        android:text="@string/button_reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonCalcualte"
+        app:layout_constraintTop_toBottomOf="@+id/finalCostPerPerson" />
+
+    <TextView
+        android:id="@+id/labelBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/bill_amount"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/labelCostByPerson"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelTip"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/tip_amount"
+        android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/labelCostByPerson"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelPartySize" />
+
+    <TextView
+        android:id="@+id/labelTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/total_amount"
+        android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/labelCostByPerson"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelTip" />
+
+    <EditText
+        android:id="@+id/textBillAmount"
+        android:layout_width="125sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="20dp"
+        android:cursorVisible="true"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:maxLength="6"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="#9E9090"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cadView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.941"
+        android:autofillHints="" />
+
+    <SeekBar
+        android:id="@+id/tipSeekbar"
+        android:layout_width="350dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#ABAC9F9F"
+        android:clickable="false"
+        android:max="25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentage" />
+
+    <TextView
+        android:id="@+id/textTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="@string/amount"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/labelTip"
+        app:layout_constraintEnd_toEndOf="@+id/textTotal"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/labelTip"
+        app:layout_constraintStart_toStartOf="@+id/textTotal"
+        app:layout_constraintTop_toTopOf="@id/labelTip"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/labelTotal"
+        app:layout_constraintStart_toEndOf="@+id/labelTotal"
+        app:layout_constraintStart_toStartOf="@+id/textBillAmount"
+        app:layout_constraintTop_toTopOf="@id/labelTotal"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="0.0" />
+
+    <Button
+        android:id="@+id/buttonCalcualte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/button_calculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelCostByPerson" />
+
+    <Spinner
+        android:id="@+id/spinnerPartySize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        android:dropDownWidth="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/labelPartySize"
+        app:layout_constraintEnd_toEndOf="@+id/textTotal"
+        app:layout_constraintHorizontal_bias="0.637"
+        app:layout_constraintStart_toEndOf="@+id/labelPartySize"
+        app:layout_constraintStart_toStartOf="@+id/textTotal"
+        app:layout_constraintTop_toBottomOf="@+id/tipSeekbar" />
+
+    <TextView
+        android:id="@+id/labelPartySize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/party_size"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/labelCostByPerson"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipSeekbar" />
+
+    <TextView
+        android:id="@+id/labelCostByPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/cost_per_person"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelTotal" />
+
+    <TextView
+        android:id="@+id/finalCostPerPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/labelCostByPerson"
+        app:layout_constraintStart_toEndOf="@+id/labelCostByPerson"
+        app:layout_constraintStart_toStartOf="@+id/textBillAmount"
+        app:layout_constraintTop_toTopOf="@+id/labelCostByPerson"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="0.0" />
+
+    <TextView
+        android:id="@+id/percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="33dp"
+        android:text="@string/tip_running_percentage"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/labelPercentage"
+        app:layout_constraintStart_toEndOf="@+id/labelPercentage"
+        app:layout_constraintTop_toBottomOf="@+id/labelBillAmount"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:id="@+id/labelPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tip_percentage"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tipSeekbar"
+        app:layout_constraintTop_toBottomOf="@+id/labelBillAmount" />
+
+    <TextView
+        android:id="@+id/cadView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/cad"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/labelBillAmount"
+        app:layout_constraintEnd_toStartOf="@+id/textBillAmount"
+        app:layout_constraintStart_toEndOf="@+id/labelBillAmount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

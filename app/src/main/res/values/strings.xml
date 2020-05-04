@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="bill_amount">Bill Amount</string>
+    <string name="tip_percentage">Tip Percentage</string>
+    <string name="party_size">Party Size</string>
+    <string name="tip_amount">Tip Amount</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="cost_per_person">Cost per Person</string>
+    <string name="button_calculate">CALCULATE</string>
+    <string name="button_reset">RESET</string>
+    <string name="amount">0.0</string>
+    <string name="tip_running_percentage">15%</string>
+    <string name="cad">CAD$</string>
+</resources>
